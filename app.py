@@ -19,4 +19,4 @@ with st.expander("Data Preperation"):
     pass
 
 with st.sidebar:
-    pass
+    st.head("Input Vars")
