@@ -7,7 +7,9 @@ st.title('Penguin Prediction App')
 st.info('This is end to end app')
 
 with st.expander("Data"):
-    pass
+    st.write("Raw Data")
+    df = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
+    df
 
 with st.expander("Data Visualization"):
     pass
