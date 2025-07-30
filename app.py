@@ -22,6 +22,10 @@ with st.expander("Data"):
     st.write("Description St")
     des = df.describe()
     des
+    
+    st.write("More information")
+    inf = df.info()
+    inf
 
 
 with st.expander("Data Visualization"):
