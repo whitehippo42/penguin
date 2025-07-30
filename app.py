@@ -31,8 +31,7 @@ with st.expander("Data"):
 with st.expander("Data Visualization"):
     st.scatter_chart(df, x='bill_length_mm', y='body_mass_g', color='species')
 
-with st.expander("Input Data"):
-    pass
+
 
 with st.expander("Data Preperation"):
     pass
@@ -45,5 +44,22 @@ with st.sidebar:
     flipper_length_nm =st.slider('Flipper length (mm)', 172.00, 231.00, 201.00)
     body_mass_g =st.slider('Body mass (g)', 2700, 6300, 4207)
     gender =st.selectbox('Gender', ('male', 'Female'))
+    data = {'island':island,
+            'bill_length_nm':bill_length_nm,
+            'bill_depth_nm':bill_depth_nm,
+            'flipper_length_nm':flipper_length_nm,
+            'body_mass_g':body_mass_g,
+            'gender':gender
+            }
+    input_df = pd.DataFrame(data, index=[0])
+    input_penguins =pd.concat([input_df, X_raw], axis=0)
+
+with st.expander("Input Data"):
+    st.write("input data")
+    input_df
+    st.write("combined data")
+    input_penguins
+
+
 
 
