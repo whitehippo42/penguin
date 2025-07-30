@@ -19,5 +19,5 @@ with st.expander("Data Preperation"):
     pass
 
 with st.sidebar:
-    st.head("Input Vars")
+    st.header("Input Vars")
     island = st.selectbox('Island',('Biscoe','Dream','Torgersen'))
