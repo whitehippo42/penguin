@@ -11,6 +11,19 @@ with st.expander("Data"):
     df = pd.read_csv("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
     df
 
+    st.write("input vars")
+    X_raw = df.drop("species", axis=1)
+    X_raw
+
+    st.write("Target vars")
+    Y_raw = df("species", axis=1)
+    Y_raw
+    
+    st.write("Description St")
+    des = df.describe()
+    des
+
+
 with st.expander("Data Visualization"):
     pass
 
