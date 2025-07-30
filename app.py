@@ -16,7 +16,7 @@ with st.expander("Data"):
     X_raw
 
     st.write("Target vars")
-    Y_raw = df("species", axis=1)
+    Y_raw = df.species.
     Y_raw
     
     st.write("Description St")
